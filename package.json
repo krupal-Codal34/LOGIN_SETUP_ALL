@@ -1,0 +1,30 @@
+{
+  "name": "new-playwright",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test_Standard": "npx playwright test tests/ProjectWay.spec.ts --headed --project=standard-user",
+    "test_Admin": "npx playwright test tests/ProjectWay.spec.ts --headed --project=admin-user",
+    "test_way1": "npx playwright test tests/Way1example.spec.ts --headed",
+    "test_way2": "npx tsc loginUtils.ts && node loginUtils.js && npx playwright test tests/Way2example.spec.ts --headed",
+    "test_SGlobal": "npx playwright test tests/Global.spec.ts --headed --project=chromium",
+    "test_AGlobal": "npx playwright test tests/Global.spec.ts --headed --project=admin-user",
+    "test_SLogin": "npx playwright test tests/login.spec.ts --headed --project=standard-user",
+    "test_ALogin": "npx playwright test tests/login.spec.ts --headed --project=admin-user",
+    "test_SCustomLogin": "npx playwright test tests/CustomFixtureLogin.spec.ts --headed --project=standard-user",
+    "test_ACustomLogin": "npx playwright test tests/CustomFixtureLogin.spec.ts --headed --project=admin-user"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^24.10.1"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "typescript": "^5.9.3"
+  }
+}
